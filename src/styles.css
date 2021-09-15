@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@400;500;700&display=swap");
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Glory", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background: #111;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p,
+ol,
+ul,
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  height: 85vh;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+  color: rgb(233, 226, 226);
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.label {
+  position: absolute;
+  font-size: 20px;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 20;
+  background-position-y: 80%;
+}
+
+.slide.active .label {
+  opacity: 1;
+  transition: opacity 300ms ease-in 0.5s;
+}
